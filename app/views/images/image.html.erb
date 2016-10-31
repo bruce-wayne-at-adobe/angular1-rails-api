@@ -1,0 +1,8 @@
+Edit Image Submission!!
+
+<%= simple_form_for @image, :html => {:multipart => true} do |f| %>
+	<%= f.input :title, label: "Name of Photo" %>
+	<%= f.input :image, as: :file, label: "Submit Image to Render Tags!" %>
+	<%#= f.file_field :image %>
+	<%= f.button :submit %>
+<% end %>

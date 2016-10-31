@@ -1,0 +1,10 @@
+<h1> index.html.erb </h1>
+
+<%#= image_tag @image.image_url.to_s %>
+<%#= image_tag @image.image_url(:thumb).to_s %>
+<%#= @image.each{ |i| i.image } %>
+<%#= image_tag @image[1].image %>
+
+<% @image.each do |element| %>
+  <li><%= image_tag element.image %></li>
+<% end %>

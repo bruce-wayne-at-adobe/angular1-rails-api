@@ -1,0 +1,20 @@
+<% if @image.save %>
+$('#<% @image.id %>').html("tags are loaded!");
+console.log("<%= @image.id %> has new tags listed here!");
+
+<% else %>
+$('#<% @image.id %>').html("false");
+console.log("<%= @image.id %> No new tags listed here!");
+
+$(document).on('click', 'div[id^=" image.id "] span a', function() {
+	var parentDiv = $(this).closest("div[id^=level]");
+
+	$.ajax(...).done(function(json) {
+		parentDiv.after(html);
+	}); 
+});
+<% end %>
+
+$(document).getElementById("pullTags").on('click'), function sendFileRequest() {
+	puts("sendRequest");
+}

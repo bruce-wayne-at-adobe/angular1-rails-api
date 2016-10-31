@@ -1,0 +1,23 @@
+<p id="notice"><%= notice %></p>
+<h1>this is my show!</h1>
+
+<!-- <p>
+  <%#= image_tag @image.image.url %>
+  <%#= image_tag @image[1].image %>
+</p> -->
+
+<%= image_tag @image.image.url unless @image.image.blank? %>
+
+
+<%= link_to 'Edit', edit_image_path(@image) %> 
+
+<br>
+<br>
+<!-- <div class="jumbotron">
+  <h1>Microsoft API Test</h1>
+  <p><strong>Tags</strong> <span id="<%= @image.id %>"><%= @image.save %></span></p>
+</div>
+
+<div class="jumbotron">
+	<p><span id="results"><%= @image.save %></span> </p>
+</div> -->
