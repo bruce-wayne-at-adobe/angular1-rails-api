@@ -73,37 +73,41 @@
 //         });
 
 // }
-$(function sendFileRequest(file) {
-    // $scope.entries.push($scope.newEntry)
-    $("#azure").submit(function() {
-        $.post(
-            "https://api.projectoxford.ai/vision/v1.0/analyze?" + $.param(params),
 
-        var params = {
-            // Request parameters
-            "visualFeatures": "Categories,Tags",
-            "details": "Celebrities",
+
+
+
+// $(function sendFileRequest(file) {
+//     // $scope.entries.push($scope.newEntry)
+//     $("#azure").submit(function() {
+//         $.post(
+//             "https://api.projectoxford.ai/vision/v1.0/analyze?" + $.param(params),
+
+//         var params = {
+//             // Request parameters
+//             "visualFeatures": "Categories,Tags",
+//             "details": "Celebrities",
        
-            beforeSend: function(xhrObj){
-                // Request headers
-                xhrObj.setRequestHeader("Content-Type","application/octet-stream");
-                xhrObj.setRequestHeader("Ocp-Apim-Subscription-Key","ef16492357394ee2b719b50fb10cd6c9");
-            }
-            // Request body
-            data: file,
-            processData: false,
-            contentType: "application/octet-stream"
-        })
-        .done(function(data) {
-            alert("success");
-        })
-        .fail(function(jqHQR, status) {
-            alert("error : " + jqHQR + " status " + status);
-        });
+//             beforeSend: function(xhrObj){
+//                 // Request headers
+//                 xhrObj.setRequestHeader("Content-Type","application/octet-stream");
+//                 xhrObj.setRequestHeader("Ocp-Apim-Subscription-Key","ef16492357394ee2b719b50fb10cd6c9");
+//             }
+//             // Request body
+//             data: file,
+//             processData: false,
+//             contentType: "application/octet-stream"
+//         })
+//         .done(function(data) {
+//             alert("success");
+//         })
+//         .fail(function(jqHQR, status) {
+//             alert("error : " + jqHQR + " status " + status);
+//         });
 
 
-}  
-});
+// }  
+// });
 console.log("checking in from custom!")
 
 

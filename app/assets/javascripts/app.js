@@ -19,6 +19,29 @@ myAppModule.controller('ImageController', ['$scope', function($scope) {
 
         {"categories":[{"name":"others_","score":0.00390625},{"name":"people_","score":0.3125,"detail":{"celebrities":[]}}],"tags":[{"name":"person","confidence":0.99692058563232422},{"name":"spectacles","confidence":0.15585459768772125}],"requestId":"41ff5c28-c766-41fd-b1f9-d1c1d6b047d2","metadata":{"width":1818,"height":1228,"format":"Jpeg"}}
     ]
+
+  	
+}])
+myAppModule.controller('ImageController2', ['$scope', function($scope) {
+
+    $scope.aws_responses = [
+
+{"labels":[{"confidence":99.2145,"name":"person"},{"confidence":99.1824,"name":"plant"},{"confidence":99.1824,"name":"potted_plant"},{"confidence":55.733,"name":"tree"},{"confidence":51.2651,"name":"road"}]},
+
+{"labels":[{"confidence":99.2484,"name":"person"},{"confidence":76.3115,"name":"clothing"},{"confidence":76.3115,"name":"suit"},{"confidence":53.765,"name":"tuxedo"}]},
+
+{"labels":[{"confidence":99.1934,"name":"person"},{"confidence":83.1083,"name":"clothing"},{"confidence":83.1083,"name":"suit"},{"confidence":54.243,"name":"fashion"},{"confidence":54.243,"name":"gown"},{"confidence":54.243,"name":"wedding_robe"},{"confidence":51.4573,"name":"smile"},{"confidence":50.6586,"name":"selfie"}]},
+
+{"labels":[{"confidence":99.1424,"name":"person"},{"confidence":51.1378,"name":"furniture"},{"confidence":50.746,"name":"dining_table"},{"confidence":50.746,"name":"table"}]},
+
+{"labels":[{"confidence":99.2383,"name":"person"},{"confidence":78.937,"name":"night_life"},{"confidence":51.3227,"name":"selfie"}]},
+
+{"labels":[{"confidence":99.0087,"name":"person"},{"confidence":56.1692,"name":"clothing"},{"confidence":56.1692,"name":"shirt"},{"confidence":54.0273,"name":"selfie"}]},
+
+{"labels":[{"confidence":98.8879,"name":"person"},{"confidence":50.6229,"name":"selfie"}]}
+
+]
+
 }])
 
 // var myAppModule = angular.module('myApp', [])
@@ -104,7 +127,7 @@ myAppModule.controller('ImageController', ['$scope', function($scope) {
  
 
 // 
-console.log("checking in from appjs!")
+// console.log("checking in from appjs!")
     
 
    
