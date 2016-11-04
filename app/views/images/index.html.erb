@@ -1,13 +1,23 @@
 <h1> index.html.erb </h1>
-<div>
-<form>
+<div ng-controller="ImageController">
+<form ng-submit="sendFileRequest">
+	<input type="file" name="file" onchange="$scope.sendFileRequest(this.file)"/>
+	<input type="submit" id="azure" value="Send">
+
 	<input type="text" ng-model="newEntry.name">
+	<input type="submit" value="Send">
 </form>
-<%#= image_tag @image.image_url.to_s %>
-<%#= image_tag @image.image_url(:thumb).to_s %>
-<%#= @image.each{ |i| i.image } %>
-<%#= image_tag @image[1].image %>
-{{newEntry.name}}
+<ul>
+	<li ng-repeat="response in responses">
+		{{ response.tags }}
+	</li>
+</ul>
+</div>
+<div id="ajax">
+
+</div>
+
+<div id="ajax">
 </div>
 <% @image.each do |element| %>
   <li><%= image_tag element.image %> </li>

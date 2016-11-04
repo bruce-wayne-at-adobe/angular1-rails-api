@@ -13,6 +13,7 @@
 //= require jquery
 //= require jquery_ujs
 //= require bootstrap-sprockets
+//= require angular 
 //= require turbolinks
 //= require_tree .
 
@@ -21,7 +22,7 @@
  // userInput = 'déjà vu';
  // sanatizedInput = string.deburr(userInput);
 
- document.addEventListener("DOMContentLoaded", function(event) { 
+ // document.addEventListener("DOMContentLoaded", function(event) { 
     // output results to the console.
   // console.log("lodash is working -> " + sanatizedInput);
 
@@ -45,49 +46,49 @@
 // 	});
 // };
 
-function sendRequest() {
+// function sendRequest() {
 
-        var params = {
-            // Request parameters
-            "visualFeatures": "Categories,Tags",
-            "details": "Celebrities"
-        };
+//         var params = {
+//             // Request parameters
+//             "visualFeatures": "Categories,Tags",
+//             "details": "Celebrities"
+//         };
       
-        $.ajax({
-            url: "https://api.projectoxford.ai/vision/v1.0/analyze?" + $.param(params),
-            beforeSend: function(xhrObj){
-                // Request headers
-                xhrObj.setRequestHeader("Content-Type","multipart/form-data");
-                xhrObj.setRequestHeader("Ocp-Apim-Subscription-Key","ef16492357394ee2b719b50fb10cd6c9");
-            },
-            type: "POST",
-            // Request body
-            data: $("#picture_form").serialize(),
-        })
-        .done(function(data) {
-            alert("success");
-        })
-        .fail(function(jqHQR, status) {
-            alert("error : " + jqHQR + " status " + status);
-        });
+//         $.ajax({
+//             url: "https://api.projectoxford.ai/vision/v1.0/analyze?" + $.param(params),
+//             beforeSend: function(xhrObj){
+//                 // Request headers
+//                 xhrObj.setRequestHeader("Content-Type","multipart/form-data");
+//                 xhrObj.setRequestHeader("Ocp-Apim-Subscription-Key","ef16492357394ee2b719b50fb10cd6c9");
+//             },
+//             type: "POST",
+//             // Request body
+//             data: $("#picture_form").serialize(),
+//         })
+//         .done(function(data) {
+//             alert("success");
+//         })
+//         .fail(function(jqHQR, status) {
+//             alert("error : " + jqHQR + " status " + status);
+//         });
 
-}
-function sendFileRequest(file) {
+// }
+$(function sendFileRequest(file) {
+    // $scope.entries.push($scope.newEntry)
+    $("#azure").submit(function() {
+        $.post(
+            "https://api.projectoxford.ai/vision/v1.0/analyze?" + $.param(params),
 
         var params = {
             // Request parameters
             "visualFeatures": "Categories,Tags",
             "details": "Celebrities",
-        };
-      
-        $.ajax({
-            url: "https://api.projectoxford.ai/vision/v1.0/analyze?" + $.param(params),
+       
             beforeSend: function(xhrObj){
                 // Request headers
                 xhrObj.setRequestHeader("Content-Type","application/octet-stream");
                 xhrObj.setRequestHeader("Ocp-Apim-Subscription-Key","ef16492357394ee2b719b50fb10cd6c9");
-            },
-            type: "POST",
+            }
             // Request body
             data: file,
             processData: false,
@@ -100,10 +101,14 @@ function sendFileRequest(file) {
             alert("error : " + jqHQR + " status " + status);
         });
 
-}
 
+}  
 });
 console.log("checking in from custom!")
+
+
+
+
 
 
 // #!/usr/bin/ruby
