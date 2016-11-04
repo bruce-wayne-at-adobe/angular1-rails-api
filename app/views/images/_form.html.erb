@@ -4,7 +4,6 @@ _form.html.erb
 	<%= f.input :title, label: "Name of Photo" %>
 	<%= f.input :image, as: :file, label: "Submit Image to Render Tags!" %>
 	<%#= f.file_field :image %>
-	<%= f.button :submit, onclick: "return sendFileRequest();" %>
+	<%#= f.button :submit :onclick => "return sendFileRequest();" %>
+ 	<%= f.submit 'submit', :class => 'send_request', :onclick => "return sendFileRequest();" %>
 <% end %>
-
- 
