@@ -17,7 +17,9 @@ myAppModule.controller('ImageController', ['$scope', function($scope) {
 
         {"categories":[{"name":"people_crowd","score":0.484375,"detail":{"celebrities":[]}},{"name":"people_group","score":0.3125}],"tags":[{"name":"person","confidence":0.999496579170227}],"requestId":"2c52e5aa-e16c-4737-87aa-3d7e68c11096","metadata":{"width":2816,"height":2112,"format":"Jpeg"}},
 
-        {"categories":[{"name":"others_","score":0.00390625},{"name":"people_","score":0.3125,"detail":{"celebrities":[]}}],"tags":[{"name":"person","confidence":0.99692058563232422},{"name":"spectacles","confidence":0.15585459768772125}],"requestId":"41ff5c28-c766-41fd-b1f9-d1c1d6b047d2","metadata":{"width":1818,"height":1228,"format":"Jpeg"}}
+        {"categories":[{"name":"others_","score":0.00390625},{"name":"people_","score":0.3125,"detail":{"celebrities":[]}}],"tags":[{"name":"person","confidence":0.99692058563232422},{"name":"spectacles","confidence":0.15585459768772125}],"requestId":"41ff5c28-c766-41fd-b1f9-d1c1d6b047d2","metadata":{"width":1818,"height":1228,"format":"Jpeg"}},
+
+        {"categories": 0,"captions":[{"text":"a crowd of people","confidence":0.05085178684979893}]}
     ]
 
   	
@@ -38,9 +40,13 @@ myAppModule.controller('ImageController2', ['$scope', function($scope) {
 
 {"labels":[{"confidence":99.0087,"name":"person"},{"confidence":56.1692,"name":"clothing"},{"confidence":56.1692,"name":"shirt"},{"confidence":54.0273,"name":"selfie"}]},
 
-{"labels":[{"confidence":98.8879,"name":"person"},{"confidence":50.6229,"name":"selfie"}]}
+{"labels":[{"confidence":98.8879,"name":"person"},{"confidence":50.6229,"name":"selfie"}]},
 
-]
+{"labels":[{"confidence":99.1459,"name":"person"},{"confidence":69.2755,"name":"fruit"},{"confidence":68.0573,"name":"apple"},{"confidence":60.7645,"name":"vegetable"}]},
+
+{"labels":[{"confidence":52.2264,"name":"text"}]}
+	
+	]
 
 }])
 
