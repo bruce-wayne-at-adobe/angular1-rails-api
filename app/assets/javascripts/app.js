@@ -19,7 +19,8 @@ myAppModule.controller('ImageController', ['$scope', function($scope) {
 
         {"categories":[{"name":"others_","score":0.00390625},{"name":"people_","score":0.3125,"detail":{"celebrities":[]}}],"tags":[{"name":"person","confidence":0.99692058563232422},{"name":"spectacles","confidence":0.15585459768772125}],"requestId":"41ff5c28-c766-41fd-b1f9-d1c1d6b047d2","metadata":{"width":1818,"height":1228,"format":"Jpeg"}},
 
-        {"categories": 0,"captions":[{"text":"a crowd of people","confidence":0.05085178684979893}]}
+        {"categories": 0,"captions":[{"text":"a crowd of people","confidence":0.05085178684979893}]},
+        
     ]
 
   	
@@ -44,7 +45,15 @@ myAppModule.controller('ImageController2', ['$scope', function($scope) {
 
 {"labels":[{"confidence":99.1459,"name":"person"},{"confidence":69.2755,"name":"fruit"},{"confidence":68.0573,"name":"apple"},{"confidence":60.7645,"name":"vegetable"}]},
 
-{"labels":[{"confidence":52.2264,"name":"text"}]}
+{"labels":[{"confidence":52.2264,"name":"text"}]},
+
+{"labels":[{"confidence":99.1451,"name":"person"},{"confidence":56.8328,"name":"brochure"},{"confidence":56.8328,"name":"flyer"},{"confidence":56.8328,"name":"poster"}]},
+
+{"labels":[{"confidence":98.9008,"name":"person"},{"confidence":86.1886,"name":"selfie"},{"confidence":73.3278,"name":"baby"},{"confidence":73.3278,"name":"child"},{"confidence":73.3278,"name":"kid"},{"confidence":73.3278,"name":"newborn"},{"confidence":60.9079,"name":"hand"},{"confidence":59.2123,"name":"smile"}]},
+
+{"labels":[{"confidence":99.3087,"name":"person"},{"confidence":79.1006,"name":"smile"},{"confidence":56.6503,"name":"selfie"},{"confidence":55.6189,"name":"laughing"}]},
+
+{"labels":[{"confidence":99.2065,"name":"person"},{"confidence":50.6265,"name":"selfie"}]}
 	
 	]
 
