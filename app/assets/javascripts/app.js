@@ -1,7 +1,7 @@
 
 
 var myAppModule = angular.module('myApp', [])
-myAppModule.controller('ImageController', ['$scope', function($scope) {
+myAppModule.controller('ImageController', ['$scope', function($scope, $rootScope) {
 
     $scope.responses = [
         
@@ -23,6 +23,33 @@ myAppModule.controller('ImageController', ['$scope', function($scope) {
         
     ]
 
+    $scope.alertMe = function () {
+     
+
+        var params = {
+            // Request parameters
+            "visualFeatures": "Categories,Tags",
+            "details": "Celebrities",
+        };
+      
+        $.ajax({
+            url: "https://api.projectoxford.ai/vision/v1.0/analyze?" + $.param(params),
+            beforeSend: function(xhrObj){
+                // Request headers
+                xhrObj.setRequestHeader("Content-Type","application/json");
+                xhrObj.setRequestHeader("Ocp-Apim-Subscription-Key","ef16492357394ee2b719b50fb10cd6c9");
+            },
+            type: "POST",
+            // Request body
+            data: "{\"url\":\"https://upload.wikimedia.org/wikipedia/en/1/17/Batman-BenAffleck.jpg\"}"
+        })
+        .done(function(data) {
+            alert("success");
+        })
+        .fail(function(jqHQR, status) {
+            alert("error : " + jqHQR + " status " + status);
+        });
+    }
   	
 }])
 myAppModule.controller('ImageController2', ['$scope', function($scope) {

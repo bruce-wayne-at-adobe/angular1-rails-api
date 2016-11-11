@@ -11,17 +11,21 @@
 		<br>
 	</li>
 
+	<!-- <button ng-click="alertMe()">Alert</button> -->
+	 <button ng-click="alertMe()" id="btn">Click here</button>
+        <p id="response">
 </ul>
 
 </div>
 <h3>AWS Tags</h3>
 <div ng-controller="ImageController2">
-<ul>
-	<li ng-repeat="response in aws_responses">
-		{{ response.labels }}
-	</li>
+	<ul>
+		<li ng-repeat="response in aws_responses">
+			{{ response.labels }}
+		</li>
 
-</ul>
+	</ul>
+
 </div>
 
 <hr>
