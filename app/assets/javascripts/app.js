@@ -42,6 +42,7 @@ myAppModule.controller('ImageController', ['$scope', function($scope, $rootScope
             type: "POST",
             // Request body
             data: "{\"url\":\"https://upload.wikimedia.org/wikipedia/en/1/17/Batman-BenAffleck.jpg\"}"
+        
         })
         .done(function(data) {
             alert("success");

@@ -21,7 +21,10 @@
 
  // userInput = 'déjà vu';
  // sanatizedInput = string.deburr(userInput);
-
+ var imageArray = [];
+// document.getElementById("form_id").onsubmit = function() {
+// 	console.log("is this working");
+// }
  // document.addEventListener("DOMContentLoaded", function(event) { 
     // output results to the console.
   // console.log("lodash is working -> " + sanatizedInput);

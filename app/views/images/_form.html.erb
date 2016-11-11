@@ -1,11 +1,11 @@
 _form.html.erb
 
-<%= simple_form_for @image, :html => {:multipart => true} do |f| %>
+<%= simple_form_for @image, id: => "form_id", :html => {:multipart => true} do |f| %>
 	<%= f.input :title, label: "Name of Photo" %>
 	<%= f.input :image, as: :file, :onChange => "alertMe(this.files[0])", label: "Submit Image to Render Tags!" %>
 	<%#= f.file_field :image %>
-	<%#= f.button :submit :onclick => "return sendFileRequest();" %>
- 	<%= f.submit 'submit', :class => 'send_request', :onclick => "return sendFileRequest();" %>
+	<%= f.button :submit, onsubmit: "imgPush();, :onclick => "return sendFileRequest();" %>
+ 	<%#= f.submit 'submit', :class => 'send_request', :onclick => "return sendFileRequest();" %>
 <% end %>
 <!--     <%#= f.file_field :image, :onChange => "sendFileRequest(this.files[0])" %>
  -->
