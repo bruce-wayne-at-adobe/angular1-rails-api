@@ -1,46 +1,25 @@
-_form.html.erb
+ _form.html.erb
 
-<%#= simple_form_for @image, :class => "form_id", :html => {:multipart => true} do |f| %>
-	<%#= f.input :title, label: "Name of Photo" %>
-	<%#= f.input :image, as: :file, :onChange => "alertMe(this.files[0])", label: "Submit Image to Render Tags!" %>
-	<%#= f.button :submit, :onsubmit => "imgPush();", :onclick => "return sendFileRequest();", :class => "form_id" %>
+<%= simple_form_for @image, :class => "form_id", :id => "form_id", :html => {:multipart => true} do |f| %>
+	<%= f.input :title, label: "Name of Photo" %>
+	<%= f.input :image, as: :file, :onChange => "alertMe(this.files[0])", label: "Submit Image to Render Tags!" %>
+	<%#= f.file_field :image %>
+	<%= f.button :submit, :onclick => "return sendFileRequest();", :class => "form_id" %> 
+
+
 	
-<%# end %>
-
-<div ng-controller="SubmitController">
-  <form novalidate class="simple-form">
-  	<BR>
-    Title: <input type="text" ng-model="user.name" /><br /><br>
-    Upload Photo: <input type="file" ng-model="user.photo" /><br />
-    <!-- Gender: <input type="radio" ng-model="user.gender" value="male" />male
-    <input type="radio" ng-model="user.gender" value="female" />female<br /> -->
-    <input type="button" ng-click="reset()" value="Reset" />
-    <input type="submit" ng-click="update(user)" value="Send Request" />
-  </form>
-  <!-- <pre>user = {{user | json}}</pre>
-  <pre>master = {{master | json}}</pre> -->
-</div>
-
-<script>
-  angular.module('formExample', [])
-    .controller('SubmitController', ['$scope', function($scope) {
-      $scope.master = {};
-
-      $scope.update = function(user) {
-        $scope.master = angular.copy(user);
-      };
-
-      $scope.reset = function() {
-        $scope.user = angular.copy($scope.master);
-      };
-
-      $scope.reset();
-    }]);
-</script>
-
  	<%#= f.submit 'submit', id: => "form_id", :class => 'send_request', :onclick => "return sendFileRequest();" %>
+<% end %>
 <!--     <%#= f.file_field :image, :onChange => "sendFileRequest(this.files[0])" %>
  -->
+
+<!-- 
+I would like to upload a photo;
+and send a post request, upon submission to Azure;
+then, I would like to render this image and its accompanied Response in view.
+
+  -->
+
 
 	<!-- <div>
 		<span class="input-group-btn">
@@ -51,5 +30,3 @@ _form.html.erb
 
 		</span>
 	</div> -->
-
-
