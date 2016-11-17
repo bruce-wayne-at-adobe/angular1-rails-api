@@ -15,7 +15,7 @@ class ImagesController < ApplicationController
 	def create
 		@image = Image.new(image_params)
 		if @image.save
-			redirect_to root_path
+			redirect_to demo_index_path
 		else
 			render 'new'
 		end

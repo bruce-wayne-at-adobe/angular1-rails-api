@@ -1,18 +1,18 @@
-$(document).ready(function() {
-    alert("this is only a test.");
+// $(document).ready(function() {
+//     alert("this is only a test.");
 
-   var imageArray = [];
+//    var imageArray = [];
 
-            imgPush = function(img) {
-                document.getElementsByClassName("form_id").onsubmit = function() {
-                    // imageArray.push("@image.id");
-                    console.log("is this working or not?");
-                    console.log(imageArray);
-                }
-            }
-        imgPush();
+//             imgPush = function(img) {
+//                 document.getElementsByClassName("form_id").onsubmit = function() {
+//                     // imageArray.push("@image.id");
+//                     console.log("is this working or not?");
+//                     console.log(imageArray);
+//                 }
+//             }
+//         imgPush();
 
-});
+// });
 
 var myAppModule = angular.module('myApp', [])
 myAppModule.controller('ImageController', ['$scope', function($scope, $rootScope) {
