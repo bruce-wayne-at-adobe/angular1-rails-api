@@ -17,6 +17,16 @@
 //= require turbolinks
 //= require_tree .
 
+
+function changeTo(text){
+    document.getElementById("#first-a").innerHTML="";
+}
+
+document.getElementById('imageDiv')
+    .innerHTML = '<img src="HPIM1017.jpg" />';
+
+
+$("#fitst-a").html("Hello World");
 // var _ = require('lodash'); 
 
  // userInput = 'déjà vu';
