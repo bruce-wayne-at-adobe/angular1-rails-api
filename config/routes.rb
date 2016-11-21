@@ -1,5 +1,9 @@
 Rails.application.routes.draw do
  
+  resources :azure_emo
+
+  
+
 	resources :demo
 
 	resources :images
