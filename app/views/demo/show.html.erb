@@ -7,7 +7,13 @@
 		</p>
 		<br>
 		<p>
-			<b>Azure</b> was able to recognize that this was a woman who was outside, standing on the street, while <b>A.W.S.</b> generated tags that suggest that she's a plant, tree or potted plant. 
+			<b>Azure</b> 
+			<p>{"categories":[{"name":"people_","score":0.94921875,"detail":{"celebrities":[]}}],"tags":[{"name":"person","confidence":0.99035865068435669},{"name":"outdoor","confidence":0.99035370349884033},{"name":"woman","confidence":0.902657687664032},{"name":"street","confidence":0.75811612606048584}]</p>
+			
+			<p>Azure was able to recognize that this was a woman who was outside, standing on the street, while</p><p> <b>A.W.S.</b> generated tags that suggest that she's a plant, tree or potted plant.
+			</p>
+			<p>[{"confidence":99.2145,"name":"person"},{"confidence":99.1824,"name":"plant"},{"confidence":99.1824,"name":"potted_plant"},{"confidence":55.733,"name":"tree"},{"confidence":51.2651,"name":"road"}]
+			</p> 
 		</p>
 
 	</h4>
@@ -21,7 +27,17 @@
 		</p>
 		<br>
 		<p>
-			<b>Azure</b> identified a group of people who were posing in a picture; it, also, noticed that one person in the photo was wearing a suit. <b>A.W.S.</b> was able to recognize the young man's suit. 
+			<b>Azure</b>
+				<br>[{"name":"person","confidence":0.9998154044151306},{"name":"clothing","confidence":0.9318203926086426},{"name":"posing","confidence":0.9262981414794922},{"name":"suit","confidence":0.6958301663398743}]
+				<br>
+
+			 <p>Azure identified a group of people who were posing in a picture; it, also, noticed that one person in the photo was wearing a suit.</p> <br>
+			 <b>A.W.S.</b>
+			 <p>
+			 [{"confidence":99.2484,"name":"person"},{"confidence":76.3115,"name":"clothing"},{"confidence":76.3115,"name":"suit"},{"confidence":53.765,"name":"tuxedo"}]
+			 </p>
+			 <p>AWS was able to recognize the young man's suit.
+			 </p> 
 		</p>
 
 	</h4>
@@ -35,7 +51,11 @@
 		</p>
 		<br>
 		<p>
-			<b>Azure</b> generated similar tags as it did for HPIM1020., "suit", "posing", "people_group".<b>A.W.S.</b> produced "wedding_robe", "gown", "selfie"--we weren't significantly impressed by these results. 
+			<b>Azure</b>
+			<br>
+			[{"name":"person","confidence":0.9997829794883728},{"name":"clothing","confidence":0.9578582048416138},{"name":"posing","confidence":0.8307458162307739},{"name":"suit","confidence":0.6397561430931091}]
+			<p>
+ 			Azure generated similar tags as it did for HPIM1020., "suit", "posing", "people_group".</p><b>A.W.S.</b> <p>[{"confidence":99.1934,"name":"person"},{"confidence":83.1083,"name":"clothing"},{"confidence":83.1083,"name":"suit"},{"confidence":54.243,"name":"fashion"},{"confidence":54.243,"name":"gown"},{"confidence":54.243,"name":"wedding_robe"},{"confidence":51.4573,"name":"smile"},{"confidence":50.6586,"name":"selfie"}]</p> <p>A.W.S. produced "wedding_robe", "gown", "selfie"--we weren't significantly impressed by these results.</p> 
 		</p>
 
 	</h4>
@@ -49,7 +69,9 @@
 		</p>
 		<br>
 		<p>
-			<b>Azure</b> produced results which identified this couple as being indoors and posing, while <b>A.W.S.</b> generated tags that focused on the table behind the couple; it provided: "furniture", "dining_table", and "table".  
+			<b>Azure</b><p>[{"name":"person","confidence":0.9983505010604858},{"name":"indoor","confidence":0.9322081208229065},{"name":"posing","confidence":0.826675534248352}</p><p>Azure produced results which identified this couple as being indoors and posing.</p><b>A.W.S.</b>
+			<p>[{"confidence":99.1424,"name":"person"},{"confidence":51.1378,"name":"furniture"},{"confidence":50.746,"name":"dining_table"},{"confidence":50.746,"name":"table"}]
+</p>A.W.S. generated tags that focused on the table behind the couple; it provided: "furniture", "dining_table", and "table".  
 		</p>
 
 	</h4>
@@ -59,11 +81,12 @@
 <div class="jumbotron" id="tar5">
 	<h4>
 		<p>
-			This image-- <b>HPIM1017.jpg</b> --produced a somewhat better result with Azure. A.W.S. labels were very limited; It didn't focus on the young women in the photo. 
+			This image-- <b>must_have_faces_front</b> --produced a somewhat better result with Azure. A.W.S. labels were very limited; It didn't focus on the young women in the photo. 
 		</p>
 		<br>
 		<p>
-			<b>Azure</b> recognized group and crowd tags,  while <b>A.W.S.</b> generated a "selfie" and "night_life" label. Both results were about par. 
+			<b>Azure</b><p>[{"name":"person","confidence":0.999476969242096},{"name":"people","confidence":0.8185837268829346},{"name":"crowd","confidence":0.008504686877131462}]</p><p> Azure recognized group and crowd tags.</p> <b>A.W.S.</b><p>[{"confidence":99.2383,"name":"person"},{"confidence":78.937,"name":"night_life"},{"confidence":51.3227,"name":"selfie"}]</p>
+<p> A.W.S. generated a "selfie" and "night_life" label. Both results were about par.</p> 
 		</p>
 
 	</h4>
@@ -73,11 +96,13 @@
 <div class="jumbotron" id="tar6">
 	<h4>
 		<p>
-			This image-- <b>HPIM1017.jpg</b> --performed better with Azure than it did with A.W.S.; Azure tags were more relevant. 
+			This image-- <b>pic2_test.jpg</b> --performed better with Azure than it did with A.W.S.; Azure tags were more relevant. 
 		</p>
 		<br>
 		<p>
-			<b>Azure</b> was able to recognize that this was a group of people posing for a picture. <b>A.W.S.</b> did not generate any useful tag results; "shirt", "selfie" and "clothing" don't seem at all useful. 
+			<b>Azure</b><p>{"categories":[{"name":"people_crowd","score":0.484375,"detail":{"celebrities":[]}},{"name":"people_group","score":0.3125}],"tags":[{"name":"person","confidence":0.999496579170227}]</p><p>Azure was able to recognize that this was a group of people posing for a picture.</p><b>A.W.S.</b><p>[{"confidence":99.0087,"name":"person"},{"confidence":56.1692,"name":"clothing"},{"confidence":56.1692,"name":"shirt"},{"confidence":54.0273,"name":"selfie"}]
+			</p><p>A.W.S. did not generate any useful tag results; "shirt", "selfie" and "clothing" don't seem at all useful.
+			</p> 
 		</p>
 
 	</h4>
@@ -91,7 +116,8 @@
 		</p>
 		<br>
 		<p>
-			<b>Azure</b> provided "spactacles", while <b>A.W.S.</b> generated "selfie". Nither results were breath taking. Although, the spectacle was a bit more relevant and intuitive; even though, the language choice is not the greatest.
+			<b>Azure</b><p>[{"name":"person","confidence":0.9969205856323242},{"name":"spectacles","confidence":0.15585459768772125}]</p><p>Azure provided "spactacles".</p><b>A.W.S.</b><p>[{"confidence":98.8879,"name":"person"},{"confidence":50.6229,"name":"selfie"}]</p>
+<p>A.W.S. generated "selfie". Nither results were breath taking. Although, the spectacle was a bit more relevant and intuitive; even though, the language choice is not the greatest.</p>
 		</p>
 
 	</h4>
