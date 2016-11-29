@@ -1,0 +1,2 @@
+class AzureEmo < ApplicationRecord
+end

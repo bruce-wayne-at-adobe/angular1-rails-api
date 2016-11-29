@@ -7,7 +7,13 @@
 		</p>
 		<br>
 		<p>
-			<b>Azure</b> was able to recognize that this was a woman who was outside, standing on the street, while <b>A.W.S.</b> generated tags that suggest that she's a plant, tree or potted plant. 
+			<b>Azure</b> 
+			<p>{"categories":[{"name":"people_","score":0.94921875,"detail":{"celebrities":[]}}],"tags":[{"name":"person","confidence":0.99035865068435669},{"name":"outdoor","confidence":0.99035370349884033},{"name":"woman","confidence":0.902657687664032},{"name":"street","confidence":0.75811612606048584}]</p>
+			
+			<p>Azure was able to recognize that this was a woman who was outside, standing on the street, while</p><p> <b>A.W.S.</b> generated tags that suggest that she's a plant, tree or potted plant.
+			</p>
+			<p>[{"confidence":99.2145,"name":"person"},{"confidence":99.1824,"name":"plant"},{"confidence":99.1824,"name":"potted_plant"},{"confidence":55.733,"name":"tree"},{"confidence":51.2651,"name":"road"}]
+			</p> 
 		</p>
 
 	</h4>
@@ -21,7 +27,17 @@
 		</p>
 		<br>
 		<p>
-			<b>Azure</b> identified a group of people who were posing in a picture; it, also, noticed that one person in the photo was wearing a suit. <b>A.W.S.</b> was able to recognize the young man's suit. 
+			<b>Azure</b>
+				<br>[{"name":"person","confidence":0.9998154044151306},{"name":"clothing","confidence":0.9318203926086426},{"name":"posing","confidence":0.9262981414794922},{"name":"suit","confidence":0.6958301663398743}]
+				<br>
+
+			 <p>Azure identified a group of people who were posing in a picture; it, also, noticed that one person in the photo was wearing a suit.</p> <br>
+			 <b>A.W.S.</b>
+			 <p>
+			 [{"confidence":99.2484,"name":"person"},{"confidence":76.3115,"name":"clothing"},{"confidence":76.3115,"name":"suit"},{"confidence":53.765,"name":"tuxedo"}]
+			 </p>
+			 <p>AWS was able to recognize the young man's suit.
+			 </p> 
 		</p>
 
 	</h4>
@@ -35,7 +51,11 @@
 		</p>
 		<br>
 		<p>
-			<b>Azure</b> generated similar tags as it did for HPIM1020., "suit", "posing", "people_group".<b>A.W.S.</b> produced "wedding_robe", "gown", "selfie"--we weren't significantly impressed by these results. 
+			<b>Azure</b>
+			<br>
+			[{"name":"person","confidence":0.9997829794883728},{"name":"clothing","confidence":0.9578582048416138},{"name":"posing","confidence":0.8307458162307739},{"name":"suit","confidence":0.6397561430931091}]
+			<p>
+ 			Azure generated similar tags as it did for HPIM1020., "suit", "posing", "people_group".</p><b>A.W.S.</b> <p>[{"confidence":99.1934,"name":"person"},{"confidence":83.1083,"name":"clothing"},{"confidence":83.1083,"name":"suit"},{"confidence":54.243,"name":"fashion"},{"confidence":54.243,"name":"gown"},{"confidence":54.243,"name":"wedding_robe"},{"confidence":51.4573,"name":"smile"},{"confidence":50.6586,"name":"selfie"}]</p> <p>A.W.S. produced "wedding_robe", "gown", "selfie"--we weren't significantly impressed by these results.</p> 
 		</p>
 
 	</h4>
@@ -49,7 +69,9 @@
 		</p>
 		<br>
 		<p>
-			<b>Azure</b> produced results which identified this couple as being indoors and posing, while <b>A.W.S.</b> generated tags that focused on the table behind the couple; it provided: "furniture", "dining_table", and "table".  
+			<b>Azure</b><p>[{"name":"person","confidence":0.9983505010604858},{"name":"indoor","confidence":0.9322081208229065},{"name":"posing","confidence":0.826675534248352}</p><p>Azure produced results which identified this couple as being indoors and posing.</p><b>A.W.S.</b>
+			<p>[{"confidence":99.1424,"name":"person"},{"confidence":51.1378,"name":"furniture"},{"confidence":50.746,"name":"dining_table"},{"confidence":50.746,"name":"table"}]
+</p>A.W.S. generated tags that focused on the table behind the couple; it provided: "furniture", "dining_table", and "table".  
 		</p>
 
 	</h4>
@@ -59,11 +81,12 @@
 <div class="jumbotron" id="tar5">
 	<h4>
 		<p>
-			This image-- <b>HPIM1017.jpg</b> --produced a somewhat better result with Azure. A.W.S. labels were very limited; It didn't focus on the young women in the photo. 
+			This image-- <b>must_have_faces_front</b> --produced a somewhat better result with Azure. A.W.S. labels were very limited; It didn't focus on the young women in the photo. 
 		</p>
 		<br>
 		<p>
-			<b>Azure</b> recognized group and crowd tags,  while <b>A.W.S.</b> generated a "selfie" and "night_life" label. Both results were about par. 
+			<b>Azure</b><p>[{"name":"person","confidence":0.999476969242096},{"name":"people","confidence":0.8185837268829346},{"name":"crowd","confidence":0.008504686877131462}]</p><p> Azure recognized group and crowd tags.</p> <b>A.W.S.</b><p>[{"confidence":99.2383,"name":"person"},{"confidence":78.937,"name":"night_life"},{"confidence":51.3227,"name":"selfie"}]</p>
+<p> A.W.S. generated a "selfie" and "night_life" label. Both results were about par.</p> 
 		</p>
 
 	</h4>
@@ -73,11 +96,13 @@
 <div class="jumbotron" id="tar6">
 	<h4>
 		<p>
-			This image-- <b>HPIM1017.jpg</b> --performed better with Azure than it did with A.W.S.; Azure tags were more relevant. 
+			This image-- <b>pic2_test.jpg</b> --performed better with Azure than it did with A.W.S.; Azure tags were more relevant. 
 		</p>
 		<br>
 		<p>
-			<b>Azure</b> was able to recognize that this was a group of people posing for a picture. <b>A.W.S.</b> did not generate any useful tag results; "shirt", "selfie" and "clothing" don't seem at all useful. 
+			<b>Azure</b><p>{"categories":[{"name":"people_crowd","score":0.484375,"detail":{"celebrities":[]}},{"name":"people_group","score":0.3125}],"tags":[{"name":"person","confidence":0.999496579170227}]</p><p>Azure was able to recognize that this was a group of people posing for a picture.</p><b>A.W.S.</b><p>[{"confidence":99.0087,"name":"person"},{"confidence":56.1692,"name":"clothing"},{"confidence":56.1692,"name":"shirt"},{"confidence":54.0273,"name":"selfie"}]
+			</p><p>A.W.S. did not generate any useful tag results; "shirt", "selfie" and "clothing" don't seem at all useful.
+			</p> 
 		</p>
 
 	</h4>
@@ -91,10 +116,190 @@
 		</p>
 		<br>
 		<p>
-			<b>Azure</b> provided "spactacles", while <b>A.W.S.</b> generated "selfie". Nither results were breath taking. Although, the spectacle was a bit more relevant and intuitive; even though, the language choice is not the greatest.
+			<b>Azure</b><p>[{"name":"person","confidence":0.9969205856323242},{"name":"spectacles","confidence":0.15585459768772125}]</p><p>Azure provided "spactacles".</p><b>A.W.S.</b><p>[{"confidence":98.8879,"name":"person"},{"confidence":50.6229,"name":"selfie"}]</p>
+<p>A.W.S. generated "selfie". Nither results were breath taking. Although, the spectacle was a bit more relevant and intuitive; even though, the language choice is not the greatest.</p>
 		</p>
 
 	</h4>
 
 </div>
+<h2>Emotion API Results</h2>
+<br>
+<div class="jumbotron" id="tar8">
+	<h4>
+		<p>
+			The API identifies the photo, <b>“Trump 2016”</b> as a mix of anger and disgust. I was expecting more anger; anger was the highest percentage, but I was expecting it to score higher.
+		</p>
+		<br>
+		<p>
+			<b>
+	  "anger": 0.28602,
+
+      "contempt": 0.008315658,
+
+      "disgust": 0.221216187,
+
+      "fear": 0.06252582,
+
+      "happiness": 0.0510859936,
+
+      "neutral": 0.136847049,
+
+      "sadness": 0.167110741,
+
+      "surprise": 0.0668785349
+      </b>
+
+		</p>
+
+	</h4>
+
+</div>
+
+<div class="jumbotron" id="tar9">
+	<h4>
+		<p>
+			<b>“Don’t make me angry”</b> was accurate, but not very realistic. The photo is extremely intense; most photos would not be this intentionally angry. It did recognize that he was angry. Here is the JSON:
+		</p>
+		<br>
+		<p>
+			<b>
+	  "anger": 0.999989152,
+      "contempt": 3.27815858e-10,
+      "disgust": 7.578268e-7,
+      "fear": 0.000009156357,
+      "happiness": 1.29796078e-11,
+      "neutral": 9.545715e-8,
+      "sadness": 1.06041753e-8,
+      "surprise": 8.26523035e-7
+      		</b>
+
+		</p>
+
+	</h4>
+
+</div>
+
+
+<div class="jumbotron" id="tar10">
+	<h4>
+		<p>
+			<b>“Disgusted”</b> was not accurate; I would think that the disgust would be higher; neutral shouldn’t be the highest percentage.
+		</p>
+		<br>
+		<p>
+			<b>
+	  "anger": 0.0798403546,
+      "contempt": 0.05259169,
+      "disgust": 0.240128875,
+      "fear": 0.00700049149,
+      "happiness": 0.03277454,
+      "neutral": 0.315023661,
+      "sadness": 0.2590964,
+      "surprise": 0.0135439914
+      		</b>
+
+		</p>
+
+	</h4>
+
+</div>
+
+<div class="jumbotron" id="tar11">
+	<h4>
+		<p>
+			<b>“Sadness”</b> seems to work well. It did a great job of measuring this little angel’s emotion in the photo.
+		</p>
+		<br>
+		<p>
+			<b>
+	  "anger": 7.03547755e-7,
+      "contempt": 0.0000037830132,
+      "disgust": 0.0000049815626,
+      "fear": 0.00000245370347,
+      "happiness": 0.000145445767,
+      "neutral": 0.000182542644,
+      "sadness": 0.99966,
+      "surprise": 7.92260764e-8
+      		</b>
+
+		</p>
+
+	</h4>
+
+</div>
+
+<div class="jumbotron" id="tar12">
+	<h4>
+		<p>
+			<b>“Fear”</b> was recognized pretty accurately. With a confidence level of 66%, fear is the dominant emotion returned, followed by surprise.
+		</p>
+		<br>
+		<p>
+			<b>
+	  "anger": 0.00123003952,
+      "contempt": 0.00033124414,
+      "disgust": 0.000800540147,
+      "fear": 0.6556605,
+      "happiness": 0.000327111629,
+      "neutral": 0.04495071,
+      "sadness": 0.06618306,
+      "surprise": 0.230516762
+      		</b>
+
+		</p>
+
+	</h4>
+
+</div>
+
+<div class="jumbotron" id="tar13">
+	<h4>
+		<p>
+			<b>“Surprise”</b> gave surprise in its results; with nearly 100 confidence, this little guy is shocked and surprised.
+		</p>
+		<br>
+		<p>
+			<b>
+	  "anger": 2.53435843e-7,
+      "contempt": 9.313816e-9,
+      "disgust": 8.436481e-8,
+      "fear": 0.00004662257,
+      "happiness": 1.810422e-8,
+      "neutral": 0.0000396454161,
+      "sadness": 1.2707244e-7,
+      "surprise": 0.9999132
+      		</b>
+
+		</p>
+
+	</h4>
+
+</div>
+
+<div class="jumbotron" id="tar14">
+	<h4>
+		<p>
+			<b>“Contempt”</b> is a hard emotion to identify, but it was able to recognize it with a 43% accuracy, followed in second by disgust. This is a good result, I think.
+		</p>
+		<br>
+		<p>
+			<b>
+	  "anger": 0.08671725,
+      "contempt": 0.426464349,
+      "disgust": 0.195833951,
+      "fear": 0.000352131668,
+      "happiness": 0.08345109,
+      "neutral": 0.189094931,
+      "sadness": 0.00519613735,
+      "surprise": 0.0128901554
+      		</b>
+
+		</p>
+
+	</h4>
+
+</div>
+
+
 
