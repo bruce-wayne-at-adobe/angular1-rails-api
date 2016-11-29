@@ -60,6 +60,7 @@ myAppModule.controller('ImageController', ['$scope', '$http', function($scope, $
         })
         .done(function(data) {
             alert("success");
+            console.log("data: ", data);
             console.log("data.categories: ", data.categories);
             $scope.data = data
             $scope.images = [];
@@ -72,11 +73,11 @@ myAppModule.controller('ImageController', ['$scope', '$http', function($scope, $
             $scope.data.categories.forEach(function(image) {
                     $scope.images.forEach(function(picture) {
                         console.log("image :", image)
-                        if (image == picture) {
+                        if (image.id == picture.id) {
                             $scope.matchingPics.push(image)
                         }
-                    console.log("Matching pics :", $scope.matchingPics )
                     })
+                    console.log("Matching pics :", $scope.matchingPics )
                 })
             
         })
