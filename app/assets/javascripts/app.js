@@ -15,7 +15,7 @@
 // });
 
 var myAppModule = angular.module('myApp', [])
-myAppModule.controller('ImageController', ['$scope', function($scope, $rootScope) {
+myAppModule.controller('ImageController', ['$scope', '$http', function($scope, $http, $rootScope) {
 
     $scope.responses = [
         
@@ -60,6 +60,24 @@ myAppModule.controller('ImageController', ['$scope', function($scope, $rootScope
         })
         .done(function(data) {
             alert("success");
+            console.log("data.categories: ", data.categories);
+            $scope.data = data
+            $scope.images = [];
+            $http.get("/images").then(function(images) {
+                $scope.images.push(images)
+
+                
+            })
+                $scope.matchingPics = [];
+            $scope.data.categories.forEach(function(image) {
+                    $scope.images.forEach(function(picture) {
+                        console.log("image :", image)
+                        if (image == picture) {
+                            $scope.matchingPics.push(image)
+                        }
+                    console.log("Matching pics :", $scope.matchingPics )
+                    })
+                })
             
         })
         .fail(function(jqHQR, status) {
