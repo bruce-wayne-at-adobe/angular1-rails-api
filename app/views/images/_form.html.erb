@@ -4,7 +4,7 @@
 	<%= f.input :title, label: "Name of Photo" %>
 	<%= f.input :image, as: :file, :onChange => "alertMe(this.files[0])", label: "Submit Image to Render Tags!" %>
 	<%#= f.file_field :image %>
-	<%= f.button :submit, :onclick => "return changeTo('Hello World');", :class => "form_id" %>
+	<%= f.button :submit, :onclick => "alertMe()", :class => "form_id" %>
 
 
 	

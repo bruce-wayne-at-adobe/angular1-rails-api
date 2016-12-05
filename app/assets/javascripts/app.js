@@ -56,37 +56,47 @@ myAppModule.controller('ImageController', ['$scope', '$http', function($scope, $
             type: "POST",
             // Request body
             data: "{\"url\":\"https://upload.wikimedia.org/wikipedia/en/1/17/Batman-BenAffleck.jpg\"}"
-        
+        // 
         })
         .done(function(data) {
             alert("success");
             console.log("data: ", data);
             console.log("data.categories: ", data.categories);
-            $scope.data = data
             $scope.images = [];
-            $http.get("/images").then(function(images) {
-                $scope.images.push(images)
+            $scope.data = data
 
-                
-            })
-                $scope.matchingPics = [];
-            $scope.data.categories.forEach(function(image) {
-                    $scope.images.forEach(function(picture) {
-                        console.log("image :", image)
-                        if (image.id == picture.id) {
-                            $scope.matchingPics.push(image)
-                        }
-                    })
-                    console.log("Matching pics :", $scope.matchingPics )
-                })
-            
+        });
+            var getParams = {
+            // Request parameters
+            "visualFeatures": "Tags",
+            // "details": "Celebrities",
+            "requestId": "data.requestId"
+            }
+
+        $.ajax({
+            url: "https://api.projectoxford.ai/vision/v1.0/models?" + $.param(getParams),
+            beforeSend: function(xhrObj){
+                // Request headers
+                xhrObj.setRequestHeader("Content-Type","application/json");
+                xhrObj.setRequestHeader("Ocp-Apim-Subscription-Key","ef16492357394ee2b719b50fb10cd6c9");
+            },
+            type: "GET",
+            // Request body
+            data: "{}",
         })
+        // var matchingPics = "{}"
+        .done(function(data) {
+            alert("success");
+            console.log("Picture data is: ", data)
+            $scope.matchingPics = data
+        })
+        // })
         .fail(function(jqHQR, status) {
             alert("error : " + jqHQR + " status " + status);
         });
             
     }
-	
+    
 }])
 myAppModule.controller('ImageController2', ['$scope', function($scope) {
 
@@ -117,8 +127,8 @@ myAppModule.controller('ImageController2', ['$scope', function($scope) {
 {"labels":[{"confidence":99.3087,"name":"person"},{"confidence":79.1006,"name":"smile"},{"confidence":56.6503,"name":"selfie"},{"confidence":55.6189,"name":"laughing"}]},
 
 {"labels":[{"confidence":99.2065,"name":"person"},{"confidence":50.6265,"name":"selfie"}]}
-	
-	]
+    
+    ]
 
 }])
 
@@ -157,20 +167,20 @@ myAppModule.controller('ImageController2', ['$scope', function($scope) {
 // };
 // (function (){
 //  function SendFileRequest($scope, $routeParams, azureProvider) ->
-// 	$scope.sendFileRequest = $routeParams.sendFileRequest;
+//  $scope.sendFileRequest = $routeParams.sendFileRequest;
 //     $scope.page_load_error = "";
 
 //     azureProvider.postPhotosForAzure($scope.sendFileRequest, function(err, tags) {
-//     	if (err) {
-//     		if (err.code == "not_found")
-//     			$scope.page_load_error = "Dude, what are you doing?!";
-//     		else
-//     			$scope.page_load_error = "Unexpected error loading page: " + err.code + " " + err.message;
-//     	} else {
-//     		$scope.tags = tags;
-//     		$scope.uploader = azureProvider.getUploader($scope.sendFileRequest, $scope);
-//     	}
-//     	});
+//      if (err) {
+//          if (err.code == "not_found")
+//              $scope.page_load_error = "Dude, what are you doing?!";
+//          else
+//              $scope.page_load_error = "Unexpected error loading page: " + err.code + " " + err.message;
+//      } else {
+//          $scope.tags = tags;
+//          $scope.uploader = azureProvider.getUploader($scope.sendFileRequest, $scope);
+//      }
+//      });
 
 //     }
 //     myAppModule.controller("azureApiTest", azureApiTest);
@@ -202,10 +212,30 @@ myAppModule.controller('ImageController2', ['$scope', function($scope) {
 //             alert("error : " + jqHQR + " status " + status);
 // })
   
- 
-
+ /*
+I HAVE BEEN PREPARING FOR A TEAM EXAMPLE OF THE RESULTS I'VE GOTTEN FROM AZURE AND AWS.
+I'VE COMPLETED THE EXAMPLE, BUT I AM STILL WORKING WITH ANGULAR BUGS. 
+content intelligence services from Azure versus AWS.
+ */
 // 
 // console.log("checking in from appjs!")
     
 
    
+        // .fail(function() {
+        //     alert("error");
+        // });
+    // })
+            // $http.get("/images").then(function(images) {
+            //     $scope.images.push(images)
+            // })
+            //     $scope.matchingPics = [];
+            // $scope.data.categories.forEach(function(image) {
+            //         $scope.images.forEach(function(picture) {
+            //             console.log("image :", image)
+            //             if (image.id == picture.id) {
+            //                 $scope.matchingPics.push(image)
+            //             }
+            //         })
+            //         console.log("Matching pics :", $scope.matchingPics )
+            //     })
